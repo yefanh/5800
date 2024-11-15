@@ -103,9 +103,9 @@ class HashTable:
 
 def process_text(text, hash_table):
     """Process the text to insert word counts into the hash table."""
-    words = re.findall(r'\b\w+\b', text.lower())
+    words = re.findall(r'\b\w+\b', text.lower()) # make the words lowercase, and extract the individual words
     for word in words:
-        hash_table.increase(word)
+        hash_table.increase(word) # increase the count of the word by 1
 
 
 def save_output(hash_table, filename="output.txt"):
